@@ -1,0 +1,21 @@
+<%- include('bootheader') -%>
+
+<%- include('menubar') -%>
+
+
+    <h1>Enter Your Recent Battleground Results</h1>
+    <p> Example: 2021/6/15; Dancin' Deryl; Rank 4 </p>
+    <ul>
+      <%  dataItems.map((item) => {%>
+        <li> <%= item['data'] %> </li>
+      <%})%>
+
+    </ul>
+
+    <form method="post" action ="/recentdata">
+      Your recent game data: <input type="text" name="dataitem", size = 50>
+      <input type="submit" value="ADD">
+    </form>
+
+
+<%- include('bootfooter') -%>
